@@ -7,12 +7,13 @@ import torch
 import argparse
 import numpy as np
 
+## return split tuple
 class Splitting(nn.Module):
     def __init__(self):
         super(Splitting, self).__init__()
 
     def even(self, x):
-        return x[:, ::2, :]
+        return x[:, ::2, :] 
 
     def odd(self, x):
         return x[:, 1::2, :]
